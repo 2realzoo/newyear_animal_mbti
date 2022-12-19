@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/footer';
+import Header from './components/header';
+import Intro from './pages/introPage';
+import QuestionPage from './pages/questionPage';
+import { Routes, Route } from 'react-router-dom';
+import { questions } from './repository/questions';
+import { results } from './repository/results';
+import ResultPage from './pages/resultPage'
+import { useState } from 'react';
 
 function App() {
+  const [condition, setCondition] = useState({});
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Intro />}></Route>
+          {questions.map((question) => {
+              return (
+                <Route path={`/q/${question.id}`} 
+                element={<QuestionPage question={question} 
+                questions={questions} 
+                condition={condition} 
+                setCondition={setCondition}/>} key={question.id}>
+                </Route>
+              )
+          })}
+          {results.map((result) => {
+            return (
+              <Route path={`/result/${result.resultId}`} element={<ResultPage result={result} setCondition={setCondition}/>} key={result.resultId}></Route>
+            )
+          })}
+      </Routes>
+      <Footer />
     </div>
   );
 }
