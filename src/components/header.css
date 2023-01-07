@@ -7,7 +7,7 @@
 .header_wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 30px 0 50px 0;
 }
 .header_title a{

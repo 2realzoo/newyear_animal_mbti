@@ -10,6 +10,9 @@
 .intro_text_wrapper {
     margin: 20px;
 }
+.intro_text_wrapper > p {
+    font-size: 1.5em;
+}
 .start_btn {
     width:20vw;
     height:10vh;
