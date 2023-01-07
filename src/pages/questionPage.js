@@ -13,8 +13,9 @@ function QuestionPage ({ question, questions, condition, setCondition, setFilter
         let newCondition = {};
         newCondition[key] = e.target.id[e.target.id.length - 1];
         setCondition({...condition, ...newCondition});
-        findResult(setFilterResult, filterResult, question.id, e.target.id.slice(-1));
-        console.log(filterResult)
+        if(key === 12) {
+            findResult(setFilterResult, filterResult, question.id, e.target.id.slice(-1));
+        }
     }
 
     return (
