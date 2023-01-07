@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import './questionPage.css';
 import ResultPage from "./resultPage";
 import findResult from "../components/findResult";
 
