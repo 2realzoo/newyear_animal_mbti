@@ -5,14 +5,18 @@ import Intro from './pages/introPage';
 import QuestionPage from './pages/questionPage';
 import { results } from './repository/results';
 import ResultPage from './pages/resultPage';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { questions } from './repository/questions';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import findResult from './components/findResult';
 
 function App() {
   const [condition, setCondition] = useState({});
-  const [filterResult, setFilterResult] = useState(results);
+  const [currentResult, setCurrentResult] = useState({});
 
+  useEffect(() => {
+    setCurrentResult(findResult(results, condition));
+  },[condition])
   return (
     <div className="App">
       <div className='body_wrapper'>
@@ -26,8 +30,8 @@ function App() {
                   questions={questions} 
                   condition={condition}
                   setCondition={setCondition}
-                  filterResult={filterResult}
-                  setFilterResult={setFilterResult}/>} 
+                  currentResult={currentResult}
+                  setCurrentResult={setCurrentResult}/>} 
                   key={question.id}>
                   </Route>
                 )
@@ -39,8 +43,8 @@ function App() {
                   result={result} 
                   condition={condition} 
                   setCondition={setCondition}
-                  filterResult={filterResult}
-                  setFilterResult={setFilterResult}/>} 
+                  currentResult={currentResult}
+                  setCurrentResult={setCurrentResult}/>} 
                 key={result.resultId}>
                 </Route>
               )

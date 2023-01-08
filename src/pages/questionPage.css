@@ -2,3 +2,28 @@ answer_btm_wrappper > button {
     width: 90%;
     font-size: 1.2em;
 }
+.progress_bar {
+    border: none;
+    width: 60%;
+    height: 10px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    
+}
+::-webkit-progress-bar {
+    background-color: #fee6eb;
+    border-radius: 10px;
+}
+::-webkit-progress-value {
+    background-color: #FFA8B8;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+
+.answer_btn {
+    background-color: #FFF7E0;
+}
+.answer_btn:hover{
+    background-color: #FFADBC;
+    color: white;
+}

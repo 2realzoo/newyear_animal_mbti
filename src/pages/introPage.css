@@ -18,4 +18,11 @@
     height:10vh;
     border: none;
     margin: 20px;
+    font-size: 1.5em;
+    border-radius: 15px;
+    background-color: #fff9e8;
+}
+.start_btn:hover{
+    background-color: #FFADBC;
+    color: white;
 }
