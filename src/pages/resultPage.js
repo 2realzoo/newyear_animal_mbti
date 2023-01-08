@@ -13,7 +13,7 @@ function ResultPage({ result, setCondition, CurrentResult, setCurrentResult }) {
                 <p className="result_modifier">{result.modifier}</p>
                 <h1 className="result_name">{result.name}</h1>
             </div>
-            <img src={result.img} className="result_image" />
+            <img src={result.img} className="result_image" alt="결과이미지" />
             <div className="result_like_wrapper">
                 <p>좋아하는 것</p>
                 <ul className="result_like">

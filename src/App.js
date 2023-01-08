@@ -5,7 +5,7 @@ import Intro from './pages/introPage';
 import QuestionPage from './pages/questionPage';
 import { results } from './repository/results';
 import ResultPage from './pages/resultPage';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { questions } from './repository/questions';
 import { useEffect, useState } from 'react';
 import findResult from './components/findResult';
