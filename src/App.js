@@ -15,40 +15,43 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Routes>
-        <Route path='/' element={<Intro />}></Route>
-          {questions.map((question) => {
+      <div className='body_wrapper'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Intro />}></Route>
+            {questions.map((question) => {
+                return (
+                  <Route path={`/q/${question.id}`} 
+                  element={<QuestionPage question={question} 
+                  questions={questions} 
+                  condition={condition}
+                  setCondition={setCondition}
+                  filterResult={filterResult}
+                  setFilterResult={setFilterResult}/>} 
+                  key={question.id}>
+                  </Route>
+                )
+            })}
+            {results.map((result) => {
               return (
-                <Route path={`/q/${question.id}`} 
-                element={<QuestionPage question={question} 
-                questions={questions} 
-                condition={condition}
-                setCondition={setCondition}
-                filterResult={filterResult}
-                setFilterResult={setFilterResult}/>} 
-                key={question.id}>
+                <Route path={`/result/${result.resultId}`} 
+                element={<ResultPage 
+                  result={result} 
+                  condition={condition} 
+                  setCondition={setCondition}
+                  filterResult={filterResult}
+                  setFilterResult={setFilterResult}/>} 
+                key={result.resultId}>
                 </Route>
               )
-          })}
-          {results.map((result) => {
-            return (
-              <Route path={`/result/${result.resultId}`} 
-              element={<ResultPage 
-                result={result} 
-                condition={condition} 
-                setCondition={setCondition}
-                filterResult={filterResult}
-                setFilterResult={setFilterResult}/>} 
-              key={result.resultId}>
-              </Route>
-            )
-          })}
-          {
+            })}
+            {
 
-          }
-      </Routes>
-      <Footer />
+            }
+        </Routes>
+        <Footer />
+      </div>
+      
     </div>
   );
 }
