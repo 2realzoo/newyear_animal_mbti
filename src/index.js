@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter basename='https://2realzoo.github.io/new-year-mbti'>
     <React.StrictMode>
       <App />
     </React.StrictMode>
