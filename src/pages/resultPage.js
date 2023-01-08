@@ -28,10 +28,12 @@ function ResultPage({ result, setCondition, CurrentResult, setCurrentResult }) {
             </div>
             <div className="result_friend_wrapper">
                 <p className="result_friend_head">나와 찰떡궁합인 친구는?</p>
-                <p className="result_friend_name">{result.friend}</p>
+                <a className="result_friend_name" href={`/result/${result.friendId}`}>{result.friend}</a>
             </div>
             <div className="result_explain">{result.text}</div>
             <button className="result_restart_btn" onClick={handleClick}><a href="/">다시하기</a></button>
+            {/* addthis 공유 툴 사용*/}
+            <div class="addthis_inline_share_toolbox"></div>
         </div>
     )
 }

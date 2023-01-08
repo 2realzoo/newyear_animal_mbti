@@ -15,7 +15,10 @@
     color: inherit;
     font-family: 'GmarketSansMedium';
 }
-.header_img a{
+.header_logo {
+    margin-top: 10px;
+}
+.header_logo a{
     text-decoration: none;
     color: inherit;
 }

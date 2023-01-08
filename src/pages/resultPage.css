@@ -7,7 +7,7 @@
     font-size: 1.5em;
     border-radius: 20px;
     padding: 10px 20px 10px 20px;
-    background-color: #fff9e8;
+    background-color: #e6e6e6;
 }
 .result_modifier {
     font-size: 1.3em;
@@ -47,7 +47,7 @@
     border: none;
     padding: 7px 10px 7px 10px;
     border-radius: 20px;
-    background-color: #fff9e8;
+    background-color: #e6e6e6;
 }
 .result_restart_btn:hover {
     background-color: #FFADBC;
@@ -60,4 +60,13 @@
 .result_name_head {
     font-size: 1.3em;
     margin: 0 0 10px 0;
+}
+.result_friend_name {
+    text-decoration: none;
+    color: inherit;
+}
+.result_friend_name:hover {
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    padding: 5px 7px 5px 7px;
 }

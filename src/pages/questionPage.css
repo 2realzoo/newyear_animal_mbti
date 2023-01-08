@@ -1,4 +1,9 @@
-answer_btm_wrappper > button {
+.question_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.answer_btn_wrappper > button {
     width: 90%;
     font-size: 1.2em;
 }
@@ -19,9 +24,11 @@ answer_btm_wrappper > button {
     border-radius: 10px;
     transition: all 0.5s;
   }
-
+.question {
+    width: 90%;
+}
 .answer_btn {
-    background-color: #FFF7E0;
+    background-color: #e6e6e6;
 }
 .answer_btn:hover{
     background-color: #FFADBC;

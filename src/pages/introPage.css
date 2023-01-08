@@ -13,14 +13,17 @@
 .intro_text_wrapper > p {
     font-size: 1.5em;
 }
+.intro_image {
+    border-radius: 20px;
+}
 .start_btn {
-    width:20vw;
-    height:10vh;
+    width:15vw;
+    height:7vh;
     border: none;
     margin: 20px;
     font-size: 1.5em;
-    border-radius: 15px;
-    background-color: #fff9e8;
+    border-radius: 30px;
+    background-color: #e6e6e6;
 }
 .start_btn:hover{
     background-color: #FFADBC;

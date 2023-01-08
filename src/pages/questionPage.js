@@ -12,10 +12,12 @@ function QuestionPage ({ question, questions, condition, setCondition, setCurren
         setCondition({...condition, ...newCondition});
     }
     return (
-        <div>
+        <div className="question_wrapper">
             <progress className="progress_bar" value={100 * question.id / questions.length} max="100"></progress>
-            <h2>Q{question.id}</h2>
-            <h2>{question.question}</h2>
+            <h2 className="question">
+                <p>Q{question.id}</p>
+                <p>{question.question}</p>
+            </h2>
             {question.id === 12?
             (<div className="answer_btn_wrapper">
                 <Link to={`/result/${currentResult.resultId}`}>
