@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/new-year-mbti/static/css/main.df0d707a.css",
+    "main.js": "/new-year-mbti/static/js/main.2a5bfdf7.js",
+    "index.html": "/new-year-mbti/index.html",
+    "main.df0d707a.css.map": "/new-year-mbti/static/css/main.df0d707a.css.map",
+    "main.2a5bfdf7.js.map": "/new-year-mbti/static/js/main.2a5bfdf7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df0d707a.css",
+    "static/js/main.2a5bfdf7.js"
+  ]
+}
