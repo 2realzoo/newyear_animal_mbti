@@ -9,7 +9,7 @@ function ResultPage({ result, condition, setCondition, filterResult, setFilterRe
         <div>
             <h3>새해 나의 동물은...</h3>
             <h2>{result.name}</h2>
-            <div>{result.imgURl}</div>
+            <img src={result.img} className="result_img" />
             <div>{result.text}</div>
             <div>{result.friend}</div>
             <button onClick={handleClick}><a href="/">다시하기</a></button>
