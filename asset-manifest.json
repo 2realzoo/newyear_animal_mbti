@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/newyear_animal_mbti/static/css/main.d30661ee.css",
-    "main.js": "/newyear_animal_mbti/static/js/main.e502ff3e.js",
+    "main.js": "/newyear_animal_mbti/static/js/main.d6d08045.js",
     "static/media/intro.jpg": "/newyear_animal_mbti/static/media/intro.fb32459be26331a90590.jpg",
     "index.html": "/newyear_animal_mbti/index.html",
     "main.d30661ee.css.map": "/newyear_animal_mbti/static/css/main.d30661ee.css.map",
-    "main.e502ff3e.js.map": "/newyear_animal_mbti/static/js/main.e502ff3e.js.map"
+    "main.d6d08045.js.map": "/newyear_animal_mbti/static/js/main.d6d08045.js.map"
   },
   "entrypoints": [
     "static/css/main.d30661ee.css",
-    "static/js/main.e502ff3e.js"
+    "static/js/main.d6d08045.js"
   ]
 }
