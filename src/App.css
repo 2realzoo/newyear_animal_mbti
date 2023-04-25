@@ -1,11 +1,12 @@
 @font-face {
-  font-family: 'GmarketSansLight';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 .App {
-  font-family: 'GmarketSansLight';
+  font-family: "GmarketSansLight";
   text-align: center;
 }
 .answer_btn_wrapper {
@@ -13,12 +14,12 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  margin: 20px;
+  margin: 2rem;
 }
 .answer_btn {
   border: none;
   margin: 8px 0 8px 0;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 1.2rem;
 }

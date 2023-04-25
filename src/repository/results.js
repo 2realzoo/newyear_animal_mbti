@@ -2,7 +2,7 @@ export const results = [
     {
         resultId:1,
         matchAns: [2,1,1,2,0,2,1,1,1,2,0,0],
-        name:'토끼(esfp)',
+        name:'토끼',
         modifier:'통통 뛰어가는',
         img:'https://2realzoo.github.io/new-year-mbti/images/rabbit.jpg',
         like:["꽉 찬 캘린더", "친구와의 약속", "알차게 보낸 하루"],

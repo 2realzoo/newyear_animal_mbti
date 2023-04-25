@@ -1,14 +1,21 @@
 footer {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
-.links >p >a {
-    text-decoration: none;
-    color: inherit;
-}
-.links >p {
-    margin-bottom: 10px;
+.links > a {
+  text-decoration: none;
+  color: inherit;
 }
 .links {
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
 }
