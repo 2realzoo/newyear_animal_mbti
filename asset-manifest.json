@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/new-year-mbti/static/css/main.df0d707a.css",
-    "main.js": "/new-year-mbti/static/js/main.2a5bfdf7.js",
-    "index.html": "/new-year-mbti/index.html",
-    "main.df0d707a.css.map": "/new-year-mbti/static/css/main.df0d707a.css.map",
-    "main.2a5bfdf7.js.map": "/new-year-mbti/static/js/main.2a5bfdf7.js.map"
+    "main.css": "/newyear_animal_mbti/static/css/main.d30661ee.css",
+    "main.js": "/newyear_animal_mbti/static/js/main.665855eb.js",
+    "static/media/intro.jpg": "/newyear_animal_mbti/static/media/intro.fb32459be26331a90590.jpg",
+    "index.html": "/newyear_animal_mbti/index.html",
+    "main.d30661ee.css.map": "/newyear_animal_mbti/static/css/main.d30661ee.css.map",
+    "main.665855eb.js.map": "/newyear_animal_mbti/static/js/main.665855eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.df0d707a.css",
-    "static/js/main.2a5bfdf7.js"
+    "static/css/main.d30661ee.css",
+    "static/js/main.665855eb.js"
   ]
 }
