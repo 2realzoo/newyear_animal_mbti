@@ -31,4 +31,5 @@
 .answer_btn:hover {
   background-color: #ffadbc;
   color: white;
+  cursor: pointer;
 }

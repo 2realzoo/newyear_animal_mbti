@@ -33,6 +33,9 @@ const backAnimation = keyframes`
   width: 5rem;
   height: 5rem;
 }
+.share-button:hover {
+  cursor: pointer;
+}
 .active {
   flex-direction: column;
   width: fit-content;

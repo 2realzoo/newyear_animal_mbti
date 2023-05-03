@@ -31,6 +31,7 @@
 .start_btn:hover {
   background-color: #ffadbc;
   color: white;
+  cursor: pointer;
 }
 @media screen and (max-width: 787px) {
   .intro_image {

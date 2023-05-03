@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./shareButtons.css";
 
-function ShareButtons({ urlName, showButtons }) {
-  const pageUrl = `https://http://localhost:3000/result/${urlName}`;
+function ShareButtons({ urlName }) {
+  const pageUrl = `http://newyear-animal-mbti.s3-website.ap-northeast-2.amazonaws.com/result/${urlName}`;
   const shareKakao = () => {
     const Kakao = window.Kakao;
     Kakao.Share.sendDefault({
@@ -11,7 +11,7 @@ function ShareButtons({ urlName, showButtons }) {
         title: "성격으로 보는 새해 나의 동물",
         description:
           "성격으로 보는 새해 동물 결과입니다! 어떤 동물이 나왔을까요? ",
-        imageUrl: "../images/title.jpg",
+        imageUrl: "https://ifh.cc/g/XBYgdJ.jpg",
         link: {
           mobileWebUrl: pageUrl,
           webUrl: pageUrl,
@@ -19,7 +19,7 @@ function ShareButtons({ urlName, showButtons }) {
       },
       itemContent: {
         profileText: "성격으로 보는 새해 나의 동물",
-        profileImageUrl: "../images/title.jpg",
+        profileImageUrl: "https://ifh.cc/g/XBYgdJ.jpg",
       },
       buttons: [
         {

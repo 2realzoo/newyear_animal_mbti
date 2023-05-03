@@ -2,7 +2,7 @@ import ShareButtons from "../components/shareButtons";
 import { results } from "../repository/results";
 import "./resultPage.css";
 
-function ResultPage({ result, setCondition, CurrentResult, setCurrentResult }) {
+function ResultPage({ result, setCondition, setCurrentResult }) {
   const handleClick = () => {
     setCondition({});
     setCurrentResult(results);
@@ -41,7 +41,7 @@ function ResultPage({ result, setCondition, CurrentResult, setCurrentResult }) {
       <button className="result_restart_btn" onClick={handleClick}>
         <a href="/">다시하기</a>
       </button>
-      <ShareButtons />
+      <ShareButtons urlName={result.resultId} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./questionPage.css";
 
 function QuestionPage({
@@ -6,17 +6,26 @@ function QuestionPage({
   questions,
   condition,
   setCondition,
-  setCurrentResult,
   currentResult,
 }) {
   let urlNum;
+
   if (question.id !== questions.length) {
     urlNum = `/q/${question.id + 1}`;
   }
+
   const handleClick = (e) => {
     let newCondition = {};
     newCondition[question.id] = e.target.id[e.target.id.length - 1];
     setCondition({ ...condition, ...newCondition });
+  };
+
+  const navigate = useNavigate();
+  const handleResult = (resultId) => {
+    navigate(`/result/${resultId}`);
+  };
+  const handleGoNext = (urlNum) => {
+    navigate(urlNum);
   };
   return (
     <div className="question_wrapper">
@@ -27,46 +36,51 @@ function QuestionPage({
       <h2 className="question">
         <p>Q{question.id}</p>
         {question.question.map((el) => (
-          <p>{el}</p>
+          <p key={el}>{el}</p>
         ))}
       </h2>
       {question.id === 12 ? (
         <div className="answer_btn_wrapper">
-          <Link to={`/result/${currentResult.resultId}`}>
-            <button
-              id={`${question.id}answer_btn_1`}
-              className="answer_btn"
-              onClick={handleClick}>
-              {question.answers[1]}
-            </button>
-          </Link>
-          <Link to={`/result/${currentResult.resultId}`}>
-            <button
-              id={`${question.id}answer_btn_2`}
-              className="answer_btn"
-              onClick={handleClick}>
-              {question.answers[2]}
-            </button>
-          </Link>
+          <button
+            id={`${question.id}answer_btn_1`}
+            className="answer_btn"
+            onClick={(e) => {
+              handleClick(e);
+              handleResult(currentResult.resultId);
+            }}>
+            {question.answers[1]}
+          </button>
+          <button
+            id={`${question.id}answer_btn_2`}
+            className="answer_btn"
+            onClick={(e) => {
+              handleClick(e);
+              handleResult(currentResult.resultId);
+            }}>
+            {question.answers[2]}
+          </button>
         </div>
       ) : (
         <div className="answer_btn_wrapper">
-          <Link to={urlNum}>
-            <button
-              id={`${question.id}answer_btn_1`}
-              className="answer_btn"
-              onClick={handleClick}>
-              {question.answers[1]}
-            </button>
-          </Link>
-          <Link to={urlNum}>
-            <button
-              id={`${question.id}answer_btn_2`}
-              className="answer_btn"
-              onClick={handleClick}>
-              {question.answers[2]}
-            </button>
-          </Link>
+          <button
+            id={`${question.id}answer_btn_1`}
+            className="answer_btn"
+            onClick={(e) => {
+              handleClick(e);
+              handleGoNext(urlNum);
+            }}>
+            {question.answers[1]}
+          </button>
+
+          <button
+            id={`${question.id}answer_btn_2`}
+            className="answer_btn"
+            onClick={(e) => {
+              handleClick(e);
+              handleGoNext(urlNum);
+            }}>
+            {question.answers[2]}
+          </button>
         </div>
       )}
     </div>
